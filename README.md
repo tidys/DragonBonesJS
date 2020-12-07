@@ -1,5 +1,8 @@
 # DragonBones JavaScript / TypeScript Runtime
 [中文 README](./README-zh_CN.md)
+
+**Note, this is a [Cocos fork](./README.cocos.md).**
+
 ## [DragonBones common library](./DragonBones/)
 ## Highly suggest use [DragonBones Pro](http://www.dragonbones.com/) to create animation.
 

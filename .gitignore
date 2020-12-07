@@ -18,3 +18,5 @@ lib-cov
 *.out
 *.pid
 *.gz
+
+DragonBones/out/
