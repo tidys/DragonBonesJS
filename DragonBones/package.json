@@ -1,9 +1,10 @@
 {
   "name": "@cocos/dragonbones-js",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "files": [
     "out/"
   ],
+  "type": "module",
   "main": "out/dragonBones.js",
   "description": "Cocos fork of [DragonBonesJS](https://github.com/DragonBones/DragonBonesJS) based on V5.7.0",
   "scripts": {
