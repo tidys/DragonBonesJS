@@ -261,13 +261,15 @@ namespace dragonBones {
             switch (displayData.type) {
                 case DisplayType.Image: {
                     const imageDisplayData = displayData as ImageDisplayData;
+                    // 
+                    if (dataPackage !== null && dataPackage.textureAtlasName.length > 0) {
+                        imageDisplayData.texture = this._getTextureData(dataPackage.textureAtlasName, displayData.path);
+                    }
+                    // 
                     if (imageDisplayData.texture === null) {
                         imageDisplayData.texture = this._getTextureData(dataName, displayData.path);
                     }
-                    else if (dataPackage !== null && dataPackage.textureAtlasName.length > 0) {
-                        imageDisplayData.texture = this._getTextureData(dataPackage.textureAtlasName, displayData.path);
-                    }
-
+                    // 
                     if (rawDisplayData !== null && rawDisplayData.type === DisplayType.Mesh && this._isSupportMesh()) {
                         display = slot.meshDisplay;
                     }
@@ -279,13 +281,15 @@ namespace dragonBones {
 
                 case DisplayType.Mesh: {
                     const meshDisplayData = displayData as MeshDisplayData;
+                    // 
+                    if (dataPackage !== null && dataPackage.textureAtlasName.length > 0) {
+                        meshDisplayData.texture = this._getTextureData(dataPackage.textureAtlasName, meshDisplayData.path);
+                    }
+                    // 
                     if (meshDisplayData.texture === null) {
                         meshDisplayData.texture = this._getTextureData(dataName, meshDisplayData.path);
                     }
-                    else if (dataPackage !== null && dataPackage.textureAtlasName.length > 0) {
-                        meshDisplayData.texture = this._getTextureData(dataPackage.textureAtlasName, meshDisplayData.path);
-                    }
-
+                    // 
                     if (this._isSupportMesh()) {
                         display = slot.meshDisplay;
                     }

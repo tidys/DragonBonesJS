@@ -906,7 +906,6 @@ namespace dragonBones {
          * @language zh_CN
          */
         public hasEventListener(type: EventStringType): boolean {
-            console.warn("Deprecated.");
             return this._proxy.hasDBEventListener(type);
         }
         /**
@@ -920,7 +919,6 @@ namespace dragonBones {
          * @language zh_CN
          */
         public addEventListener(type: EventStringType, listener: Function, target: any): void {
-            console.warn("Deprecated.");
             this._proxy.addDBEventListener(type, listener, target);
         }
         /**
@@ -934,7 +932,6 @@ namespace dragonBones {
          * @language zh_CN
          */
         public removeEventListener(type: EventStringType, listener: Function, target: any): void {
-            console.warn("Deprecated.");
             this._proxy.removeDBEventListener(type, listener, target);
         }
         /**

@@ -102,6 +102,7 @@ namespace dragonBones {
          * @internal
          */
         public _slotData: SlotData;
+        private _isFromCache: boolean;
         protected _rawDisplayDatas: Array<DisplayData | null> | null;
         /**
          * @internal
@@ -560,6 +561,7 @@ namespace dragonBones {
 
             this._slotData = slotData;
             //
+            this._isFromCache = false;
             this._visibleDirty = true;
             this._blendModeDirty = true;
             this._colorDirty = true;
@@ -593,6 +595,7 @@ namespace dragonBones {
          * @internal
          */
         public update(cacheFrameIndex: number): void {
+            this._isFromCache = false;
             if (this._displayDirty) {
                 this._displayDirty = false;
                 this._updateDisplay();
@@ -690,6 +693,7 @@ namespace dragonBones {
                     }
                 }
                 else {
+                    this._isFromCache = true;
                     this._armature._armatureData.getCacheFrame(this.globalTransformMatrix, this.global, this._cachedFrameIndex);
                 }
 

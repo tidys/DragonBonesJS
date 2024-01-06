@@ -274,7 +274,7 @@ namespace dragonBones {
     export class DragonBones {
         public static readonly VERSION: string = "5.6.300";
 
-        public static yDown: boolean = true;
+        public static yDown: boolean = false;
         public static debug: boolean = false;
         public static debugDraw: boolean = false;
         public static webAssembly: boolean = false;
@@ -341,10 +341,6 @@ namespace dragonBones {
     }
 }
 //
-if (typeof global === "undefined") {
-    var global = window as any;
-}
-//
 if (!console.warn) {
     console.warn = function () { };
 }
@@ -370,3 +366,5 @@ var __extends: any = function (t: any, e: any) {
     }
     r.prototype = e.prototype, t.prototype = new (r as any)();
 };
+// @ts-ignore
+module.exports = dragonBones;

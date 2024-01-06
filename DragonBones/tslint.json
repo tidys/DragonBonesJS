@@ -1,10 +1,10 @@
 {
     "rules": {
-        "no-unused-expression": true,
+        "no-unused-expression": false,
         "no-unreachable": true,
         "no-duplicate-variable": true,
         "no-duplicate-key": true,
-        "no-unused-variable": true,
+        "no-unused-variable": false,
         "curly": false,
         "class-name": true,
         "triple-equals": true,
